@@ -45,25 +45,44 @@ struct ContentView: View {
 //    }
 
     // MARK: - ボタン表示とタップアクション
-    @State var checkButtonActionText = "Before Tapped."
+//    @State var checkButtonActionText = "Before Tapped."
+//
+//    var body: some View {
+//        VStack {
+//            Button(action: {
+//                /// タップアクション
+//                self.checkButtonActionText = "Button Tapped."  /// selfは必須
+//            }) {
+//                /// ボタンの設定
+//                Text("Button")
+//                    .padding(.horizontal, 5.0)
+//                    .background(Color.orange)
+//                    .border(Color.green, width: 2)
+//            }
+//
+//            Text(checkButtonActionText)
+//                .padding(.top, 10.0)
+//        }
+//
+//    }
     
+    // MARK: - 画像ありボタン表示
     var body: some View {
         VStack {
             Button(action: {
                 /// タップアクション
-                self.checkButtonActionText = "Button Tapped."  /// selfは必須
             }) {
                 /// ボタンの設定
-                Text("Button")
-                    .padding(.horizontal, 5.0)
-                    .background(Color.orange)
-                    .border(Color.green, width: 2)
+                Image("download")
+                    .resizable()  /// サイズを変更する時に必要
+                    .frame(width: 30.0, height: 30.0)
+                
+                Text("Download")
             }
-            
-            Text(checkButtonActionText)
-                .padding(.top, 10.0)
+            .padding(.horizontal, 10.0)
+            .background(Color.orange)
+            .border(Color.green, width: 2)
         }
-        
     }
     
 }
