@@ -35,13 +35,35 @@ struct ContentView: View {
 //    }
     
     // MARK: - 複数要素の配置（水平）: HStack
+//    var body: some View {
+//        HStack {
+//            Text("Start Tutorial SwiftUI")
+//                .background(Color.blue)
+//            Text("hogehoge")
+//                .background(Color.red)
+//        }
+//    }
+
+    // MARK: - ボタン表示とタップアクション
+    @State var checkButtonActionText = "Before Tapped."
+    
     var body: some View {
-        HStack {
-            Text("Start Tutorial SwiftUI")
-                .background(Color.blue)
-            Text("hogehoge")
-                .background(Color.red)
+        VStack {
+            Button(action: {
+                /// タップアクション
+                self.checkButtonActionText = "Button Tapped."  /// selfは必須
+            }) {
+                /// ボタンの設定
+                Text("Button")
+                    .padding(.horizontal, 5.0)
+                    .background(Color.orange)
+                    .border(Color.green, width: 2)
+            }
+            
+            Text(checkButtonActionText)
+                .padding(.top, 10.0)
         }
+        
     }
     
 }
