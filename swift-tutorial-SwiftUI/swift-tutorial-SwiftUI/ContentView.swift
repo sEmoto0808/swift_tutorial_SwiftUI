@@ -9,9 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - ラベル表示
     var body: some View {
-        Text("Hello, World!")
+        Text("Start Tutorial SwiftUI")
     }
+    
+    // MARK: - リスト表示
+//    var body: some View {
+//        List {
+//            Text("hogehoge")
+//            Text("fugafuga")
+//        }
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
