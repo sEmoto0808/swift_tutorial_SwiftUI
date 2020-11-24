@@ -86,20 +86,39 @@ struct ContentView: View {
 //    }
     
     // MARK: - ActionSheetを表示
-    @State var isShownActionSheet = false
-    @State var actionSheetText = "Show ActionSheet"
+//    @State var isShownActionSheet = false
+//    @State var actionSheetText = "Show ActionSheet"
+//
+//    var body: some View {
+//        Button(action: {
+//            self.isShownActionSheet = true
+//        }) {
+//            Text(actionSheetText)
+//        }
+//        .actionSheet(isPresented: $isShownActionSheet, content: {
+//            ActionSheet(title: Text("Title"),
+//                        message: Text("Message"),
+//                        buttons: [.default(Text("Default")) { self.actionSheetText = "Tapped Default" },
+//                                  .destructive(Text("Destructive")),
+//                                  .cancel()])
+//        })
+//    }
+    
+    // MARK: - Alertを表示
+    @State var isShownAlert = false
+    @State var alertText = "Show Alert"
     
     var body: some View {
         Button(action: {
-            self.isShownActionSheet = true
+            self.isShownAlert = true
         }) {
-            Text(actionSheetText)
-        }.actionSheet(isPresented: $isShownActionSheet, content: {
-            ActionSheet(title: Text("Title"),
-                        message: Text("Message"),
-                        buttons: [.default(Text("Default")) { self.actionSheetText = "Tapped Default" },
-                                  .destructive(Text("Destructive")),
-                                  .cancel()])
+            Text(alertText)
+        }
+        .alert(isPresented: $isShownAlert, content: {
+            Alert(title: Text("Title"),
+                  message: Text("Message"),
+                  primaryButton: .default(Text("Default")) { self.alertText = "Tapped Default" },
+                  secondaryButton: .destructive(Text("Destructive")))
         })
     }
 }
