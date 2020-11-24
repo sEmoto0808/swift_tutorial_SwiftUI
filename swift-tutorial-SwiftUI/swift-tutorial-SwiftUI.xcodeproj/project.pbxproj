@@ -13,6 +13,7 @@
 		A2744A7B256BB95E007EF40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2744A7A256BB95E007EF40E /* Assets.xcassets */; };
 		A2744A7E256BB95E007EF40E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2744A7D256BB95E007EF40E /* Preview Assets.xcassets */; };
 		A2744A81256BB95E007EF40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2744A7F256BB95E007EF40E /* LaunchScreen.storyboard */; };
+		A2999AD7256D2B3B001566E3 /* NavigationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2999AD6256D2B3B001566E3 /* NavigationContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A2744A7D256BB95E007EF40E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2744A80256BB95E007EF40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2744A82256BB95E007EF40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2999AD6256D2B3B001566E3 /* NavigationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A2744A74256BB95D007EF40E /* AppDelegate.swift */,
 				A2744A76256BB95D007EF40E /* SceneDelegate.swift */,
 				A2744A78256BB95D007EF40E /* ContentView.swift */,
+				A2999AD6256D2B3B001566E3 /* NavigationContentView.swift */,
 				A2744A7A256BB95E007EF40E /* Assets.xcassets */,
 				A2744A7F256BB95E007EF40E /* LaunchScreen.storyboard */,
 				A2744A82256BB95E007EF40E /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2999AD7256D2B3B001566E3 /* NavigationContentView.swift in Sources */,
 				A2744A75256BB95D007EF40E /* AppDelegate.swift in Sources */,
 				A2744A77256BB95D007EF40E /* SceneDelegate.swift in Sources */,
 				A2744A79256BB95D007EF40E /* ContentView.swift in Sources */,
