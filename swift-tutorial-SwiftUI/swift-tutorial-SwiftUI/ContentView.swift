@@ -67,24 +67,41 @@ struct ContentView: View {
 //    }
     
     // MARK: - 画像ありボタン表示
-    var body: some View {
-        VStack {
-            Button(action: {
-                /// タップアクション
-            }) {
-                /// ボタンの設定
-                Image("download")
-                    .resizable()  /// サイズを変更する時に必要
-                    .frame(width: 30.0, height: 30.0)
-                
-                Text("Download")
-            }
-            .padding(.horizontal, 10.0)
-            .background(Color.orange)
-            .border(Color.green, width: 2)
-        }
-    }
+//    var body: some View {
+//        VStack {
+//            Button(action: {
+//                /// タップアクション
+//            }) {
+//                /// ボタンの設定
+//                Image("download")
+//                    .resizable()  /// サイズを変更する時に必要
+//                    .frame(width: 30.0, height: 30.0)
+//
+//                Text("Download")
+//            }
+//            .padding(.horizontal, 10.0)
+//            .background(Color.orange)
+//            .border(Color.green, width: 2)
+//        }
+//    }
     
+    // MARK: - ActionSheetを表示
+    @State var isShownActionSheet = false
+    @State var actionSheetText = "Show ActionSheet"
+    
+    var body: some View {
+        Button(action: {
+            self.isShownActionSheet = true
+        }) {
+            Text(actionSheetText)
+        }.actionSheet(isPresented: $isShownActionSheet, content: {
+            ActionSheet(title: Text("Title"),
+                        message: Text("Message"),
+                        buttons: [.default(Text("Default")) { self.actionSheetText = "Tapped Default" },
+                                  .destructive(Text("Destructive")),
+                                  .cancel()])
+        })
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
