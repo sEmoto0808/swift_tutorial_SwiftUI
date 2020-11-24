@@ -21,27 +21,45 @@ struct NavigationRootView: View {
 //            })
 //        }
 //    }
+
     // MARK: - NavigationLinkが生成するLink以外でpush遷移（別のボタンとか）
-    @State var isActiveContentView = false
+//    @State var isActiveContentView = false
+//
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                NavigationLink(destination: ContentView(),
+//                               isActive: $isActiveContentView) {
+//                    /// 現状 @ViewBuilder をnilにしてインスタンス化できない
+//                    EmptyView()
+//                }
+//
+//                Button(action: {
+//                    self.isActiveContentView.toggle()
+//                }) {
+//                    Text("Move to ContentView")
+//                }
+//                .background(Color.orange)
+//            }
+//
+//
+//        }
+//    }
+    
+    // MARK: - モーダル遷移（現行のモーダルとは異なり、下にドラッグして閉じる）
+    @State var isPresentedContentView = false
     
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: ContentView(),
-                               isActive: $isActiveContentView) {
-                    /// 現状 @ViewBuilder をnilにしてインスタンス化できない
-                    EmptyView()
-                }
-                
-                Button(action: {
-                    self.isActiveContentView.toggle()
-                }) {
-                    Text("Move to ContentView")
-                }
-                .background(Color.orange)
+        VStack {
+            Button(action: {
+                self.isPresentedContentView.toggle()
+            }) {
+                Text("モーダル遷移")
             }
-            
-            
+            .sheet(isPresented: $isPresentedContentView) {
+                ContentView()
+            }
+            /// NOTE: Xcode 12, SwiftUI 2.0 から現行のモーダルに対応する`fullScreenCover()`が追加されたらしい
         }
     }
 }
