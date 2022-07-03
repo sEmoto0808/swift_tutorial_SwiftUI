@@ -14,7 +14,7 @@ struct HomeScreen: View {
 
             List {
                 Section(header: Text("Animation").fontWeight(.bold)) {
-                    createListItem(title: "Rotation", itemType: .animationRotation)
+                    createListItem(title: "Rotation - Carousel", itemType: .animationRotation)
                 }
             }
             .navigationTitle("Home")
@@ -40,7 +40,7 @@ struct HomeScreen: View {
 
             switch self {
             case .animationRotation:
-                return RotationScreen()
+                return RotationCarouselScreen()
             }
         }
     }
