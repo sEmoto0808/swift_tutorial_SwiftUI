@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct RotationCarouselScreen: View {
+
+    // MARK: rotate image
+    @State var imageAnimated = false
+    @State var degrees = 0.0
+
     var body: some View {
         VStack {
 
@@ -34,14 +39,13 @@ struct RotationCarouselScreen: View {
                 .font(.title2)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-                GeometryReader {proxy in
-
-                    let size = proxy.size
+                GeometryReader { _ in
 
                     Image("food1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .clipShape(Circle())
+                        .rotationEffect(.init(degrees: imageAnimated ? degrees : 0))
                         .offset(x: -20)
                 }
                 .frame(height: getScreenSize().width)
@@ -62,6 +66,27 @@ struct RotationCarouselScreen: View {
             .background(
                 Color("MidnightBlue")
             )
+            .gesture(
+
+                DragGesture().onEnded({ value in
+
+                    if imageAnimated {
+                        return
+                    }
+
+                    let transrationY = value.translation.height
+
+                    if transrationY < 0 {
+                        // MARK: Swiped Up
+                        animateRotation(isUp: true)
+                    }
+
+                    if transrationY > 0 {
+                        // MARK: Swiped Down
+                        animateRotation(isUp: false)
+                    }
+                })
+            )
     }
 
     func menuLabel(text: String, icon: String) -> some View {
@@ -70,6 +95,22 @@ struct RotationCarouselScreen: View {
         } icon: {
             Image(systemName: icon)
                 .frame(width: 30)
+        }
+    }
+
+    func animateRotation(isUp: Bool) {
+
+        withAnimation(.interactiveSpring(response: 1.5, dampingFraction: 0.8, blendDuration: 0.8)) {
+
+            degrees = isUp ? 360:-360
+            imageAnimated = true
+        }
+
+        // Setting Back to Original State after animation Finished
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+
+            degrees = 0
+            imageAnimated = false
         }
     }
 }
