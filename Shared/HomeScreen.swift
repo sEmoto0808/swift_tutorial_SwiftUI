@@ -13,14 +13,14 @@ struct HomeScreen: View {
         NavigationView {
 
             List {
-                createListItem(title: "Animation - Rotation", listType: .animationRotation)
+                createListItem(title: "Animation - Rotation", itemType: .animationRotation)
             }
         }
 
     }
 
-    func createListItem(title: String, listType: ListType) -> some View {
-        NavigationLink(destination: listType.destination) {
+    func createListItem(title: String, itemType: ItemType) -> some View {
+        NavigationLink(destination: itemType.destination) {
 
             HStack {
 
@@ -30,7 +30,7 @@ struct HomeScreen: View {
         }
     }
 
-    enum ListType {
+    enum ItemType {
         case animationRotation
 
         var destination: some View {
