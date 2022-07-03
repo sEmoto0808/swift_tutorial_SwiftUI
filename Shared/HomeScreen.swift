@@ -13,8 +13,11 @@ struct HomeScreen: View {
         NavigationView {
 
             List {
-                createListItem(title: "Animation - Rotation", itemType: .animationRotation)
+                Section(header: Text("Animation").fontWeight(.bold)) {
+                    createListItem(title: "Rotation", itemType: .animationRotation)
+                }
             }
+            .navigationTitle("Home")
         }
 
     }
