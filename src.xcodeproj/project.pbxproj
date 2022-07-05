@@ -20,6 +20,7 @@
 		9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */; };
 		9AD3996F2871C3F500B672B5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996E2871C3F500B672B5 /* View+Extension.swift */; };
 		9AF0DB47287471B600C7654F /* FitnessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0DB46287471B600C7654F /* FitnessScreen.swift */; };
+		9AF0DB4A287478E900C7654F /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0DB49287478E900C7654F /* Ring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationCarouselScreen.swift; sourceTree = "<group>"; };
 		9AD3996E2871C3F500B672B5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		9AF0DB46287471B600C7654F /* FitnessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessScreen.swift; sourceTree = "<group>"; };
+		9AF0DB49287478E900C7654F /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +171,18 @@
 		9AF0DB452874719800C7654F /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
+				9AF0DB48287478CA00C7654F /* Model */,
 				9AF0DB46287471B600C7654F /* FitnessScreen.swift */,
 			);
 			path = Fitness;
+			sourceTree = "<group>";
+		};
+		9AF0DB48287478CA00C7654F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AF0DB49287478E900C7654F /* Ring.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A04D6E02870208300EA0A63 /* HomeScreen.swift in Sources */,
+				9AF0DB4A287478E900C7654F /* Ring.swift in Sources */,
 				9A04D6DE2870208300EA0A63 /* srcApp.swift in Sources */,
 				9AD3996F2871C3F500B672B5 /* View+Extension.swift in Sources */,
 				9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */,
