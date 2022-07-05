@@ -19,6 +19,7 @@
 		9A04D6E32870208300EA0A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A04D6B82870208300EA0A63 /* Assets.xcassets */; };
 		9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */; };
 		9AD3996F2871C3F500B672B5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996E2871C3F500B672B5 /* View+Extension.swift */; };
+		9AF0DB47287471B600C7654F /* FitnessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0DB46287471B600C7654F /* FitnessScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9A04D6DC2870208300EA0A63 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationCarouselScreen.swift; sourceTree = "<group>"; };
 		9AD3996E2871C3F500B672B5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		9AF0DB46287471B600C7654F /* FitnessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		9A04D6B52870208100EA0A63 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9AF0DB452874719800C7654F /* Fitness */,
 				9AD3996A28719E8D00B672B5 /* Rotation */,
 				9A04D6B62870208100EA0A63 /* srcApp.swift */,
 				9A04D6B72870208100EA0A63 /* HomeScreen.swift */,
@@ -161,6 +164,14 @@
 				9AD3996E2871C3F500B672B5 /* View+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9AF0DB452874719800C7654F /* Fitness */ = {
+			isa = PBXGroup;
+			children = (
+				9AF0DB46287471B600C7654F /* FitnessScreen.swift */,
+			);
+			path = Fitness;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +336,7 @@
 				9A04D6DE2870208300EA0A63 /* srcApp.swift in Sources */,
 				9AD3996F2871C3F500B672B5 /* View+Extension.swift in Sources */,
 				9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */,
+				9AF0DB47287471B600C7654F /* FitnessScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

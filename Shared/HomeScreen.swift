@@ -15,6 +15,7 @@ struct HomeScreen: View {
             List {
                 Section(header: Text("Animation").fontWeight(.bold)) {
                     createListItem(title: "Rotation - Carousel", itemType: .animationRotation)
+                    createListItem(title: "Fitness", itemType: .animationFitness)
                 }
             }
             .navigationTitle("Home")
@@ -35,12 +36,16 @@ struct HomeScreen: View {
 
     enum ItemType {
         case animationRotation
+        case animationFitness
 
         var destination: some View {
 
+            // NOTE: https://developer.apple.com/forums/thread/118172
             switch self {
             case .animationRotation:
-                return RotationCarouselScreen()
+                return AnyView(RotationCarouselScreen())
+            case .animationFitness:
+                return AnyView(FitnessScreen())
             }
         }
     }
