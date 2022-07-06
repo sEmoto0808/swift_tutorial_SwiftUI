@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FitnessScreen: View {
     var body: some View {
-        Text("Hello, FitnessScreen!")
+        FitnessRingCardView()
     }
 }
 
