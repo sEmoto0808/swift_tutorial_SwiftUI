@@ -38,10 +38,48 @@ struct FitnessRingCardView: View {
                         }
                         .padding(CGFloat(index) * 16)
                     }
-                    .frame(width: 130, height: 130)
+
                 }
+                .frame(width: 130, height: 130)
+
+                VStack(alignment: .leading, spacing: 12) {
+
+                    ForEach(rings) { ring in
+
+                        Label {
+
+                            HStack(alignment: .bottom, spacing: 6) {
+
+                                Text("\(Int(ring.progress))%")
+                                    .font(.title3.bold())
+
+                                Text(ring.value)
+                                    .font(.caption)
+                            }
+                        } icon: {
+
+                            Group {
+
+                                Image(systemName: ring.keyIcon)
+                                    .font(.title2)
+                                    .foregroundColor(ring.keyColor)
+                            }
+                            .frame(width: 30)
+                        }
+                    }
+                }
+                .padding(.leading, 10)
             }
+            .padding(.top, 20)
         }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 25)
+        .foregroundColor(.white)
+        .background(
+
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                .fill(Color("MidnightBlue"))
+        )
     }
 }
 
