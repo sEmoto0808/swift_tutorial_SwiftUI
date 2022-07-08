@@ -22,21 +22,7 @@ struct FitnessRingCardView: View {
 
                     ForEach(rings.indices, id: \.self) { index in
 
-                        ZStack {
-                            Circle()
-                                .stroke(.gray.opacity(0.3), lineWidth: 10)
-
-                            Circle()
-                            // NOTE: 塗り潰しの設定
-                                .trim(from: 0, to: rings[index].progress / 100)
-                                .stroke(
-                                    rings[index].keyColor,
-                                    style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round)
-                                )
-                            // NOTE: 角度調整
-                                .rotationEffect(.init(degrees: -90))
-                        }
-                        .padding(CGFloat(index) * 16)
+                        AnimatedRingView(ring: rings[index], index: index)
                     }
 
                 }
@@ -74,7 +60,6 @@ struct FitnessRingCardView: View {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 25)
-        .foregroundColor(.white)
         .background(
 
             RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -86,5 +71,47 @@ struct FitnessRingCardView: View {
 struct FitnessRingCardView_Previews: PreviewProvider {
     static var previews: some View {
         FitnessScreen()
+    }
+}
+
+// MARK: Animating Rings
+struct AnimatedRingView: View {
+    var ring: Ring
+    var index: Int
+    @State var showRing = false
+
+    var body: some View {
+
+        ZStack {
+            Circle()
+                .stroke(.gray.opacity(0.3), lineWidth: 10)
+
+            Circle()
+            // NOTE: 塗り潰しの設定
+                .trim(from: 0, to: showRing ? rings[index].progress / 100 : 0)
+                .stroke(
+                    rings[index].keyColor,
+                    style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round)
+                )
+            // NOTE: 角度調整
+                .rotationEffect(.init(degrees: -90))
+        }
+        .padding(CGFloat(index) * 16)
+        .onAppear {
+
+            // NOTE: Show After Initial Animation Finished
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+
+                withAnimation(
+                    .interactiveSpring(
+                        response: 1,
+                        dampingFraction: 1,
+                        blendDuration: 1
+                    ).delay(Double(index) * 0.1)
+                ) {
+                    showRing = true
+                }
+            }
+        }
     }
 }
