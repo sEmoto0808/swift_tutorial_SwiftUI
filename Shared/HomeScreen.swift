@@ -16,6 +16,7 @@ struct HomeScreen: View {
                 Section(header: Text("Animation").fontWeight(.bold)) {
                     createListItem(title: "Rotation - Carousel", itemType: .animationRotation)
                     createListItem(title: "Fitness", itemType: .animationFitness)
+                    createListItem(title: "Scroll - Expand Center View", itemType: .animationExpandCenterScroll)
                 }
             }
             .navigationTitle("Home")
@@ -37,6 +38,7 @@ struct HomeScreen: View {
     enum ItemType {
         case animationRotation
         case animationFitness
+        case animationExpandCenterScroll
 
         var destination: some View {
 
@@ -46,6 +48,8 @@ struct HomeScreen: View {
                 return AnyView(RotationCarouselScreen())
             case .animationFitness:
                 return AnyView(FitnessScreen())
+            case .animationExpandCenterScroll:
+                return AnyView(ExpandCenterScrollScreen())
             }
         }
     }
