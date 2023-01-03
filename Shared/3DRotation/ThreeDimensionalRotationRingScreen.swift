@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct ThreeDimensionalRotationRingScreen: View {
+
+    private let gradient = LinearGradient(
+        gradient: Gradient(colors: [.blue, .red]),
+        startPoint: .leading,
+        endPoint: .trailing
+    )
+
+    let circleSize: CGFloat = 300.0
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Circle()
+                .stroke(
+                    gradient,
+                    style: .init(lineWidth: 5)
+                )
+                .frame(width: circleSize, height: circleSize)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black)
+
     }
 }
 
