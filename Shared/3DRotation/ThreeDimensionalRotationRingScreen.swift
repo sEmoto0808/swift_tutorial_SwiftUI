@@ -17,17 +17,60 @@ struct ThreeDimensionalRotationRingScreen: View {
 
     let circleSize: CGFloat = 300.0
 
+    @State private var degrees = 0.0
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         VStack {
-            Circle()
-                .stroke(
-                    gradient,
-                    style: .init(lineWidth: 5)
-                )
-                .frame(width: circleSize, height: circleSize)
+            ZStack(alignment: .bottom) {
+                Circle()
+                    .stroke(
+                        gradient,
+                        style: .init(lineWidth: 5)
+                    )
+                    .frame(width: circleSize, height: circleSize)
+
+                Image(systemName: "chevron.forward")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .offset(y: -circleSize + 12)
+
+                Image(systemName: "chevron.backward")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .offset(y: 12)
+
+                Image(systemName: "chevron.up")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .offset(x: -circleSize/2, y: -circleSize/2 + 20)
+
+                Image(systemName: "chevron.down")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .offset(x: circleSize/2, y: -circleSize/2 + 20)
+            }
+            .rotationEffect(
+                .degrees(degrees)
+            )
+
         }
+        .rotation3DEffect(
+            .degrees(75),
+            axis: (x: 1, y: 0, z: 0)
+        )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
+        .onReceive(timer) { _ in
+            degrees += 3
+            if degrees > 360 {
+                degrees = 0
+            }
+        }
 
     }
 }
