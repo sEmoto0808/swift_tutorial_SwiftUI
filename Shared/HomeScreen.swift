@@ -18,6 +18,7 @@ struct HomeScreen: View {
                     createListItem(title: "Fitness", itemType: .animationFitness)
                     createListItem(title: "Scroll - Expand Center View", itemType: .animationExpandCenterScroll)
                     createListItem(title: "Change Front Back", itemType: .animationChangeFrontBack)
+                    createListItem(title: "Rotation - 3D Ring", itemType: .animation3DRotation)
                 }
             }
             .navigationTitle("Home")
@@ -41,6 +42,7 @@ struct HomeScreen: View {
         case animationFitness
         case animationExpandCenterScroll
         case animationChangeFrontBack
+        case animation3DRotation
 
         var destination: some View {
 
@@ -54,6 +56,8 @@ struct HomeScreen: View {
                 return AnyView(ExpandCenterScrollScreen())
             case .animationChangeFrontBack:
                 return AnyView(ChangeFrontBackScreen())
+            case .animation3DRotation:
+                return AnyView(ThreeDimensionalRotationRingScreen())
             }
         }
     }

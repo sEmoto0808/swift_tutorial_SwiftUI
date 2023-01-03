@@ -22,6 +22,7 @@
 		9A2369BC28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */; };
 		9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */; };
 		9AD3996F2871C3F500B672B5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996E2871C3F500B672B5 /* View+Extension.swift */; };
+		9AECC0962963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECC0952963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift */; };
 		9AF0DB47287471B600C7654F /* FitnessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0DB46287471B600C7654F /* FitnessScreen.swift */; };
 		9AF0DB4A287478E900C7654F /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0DB49287478E900C7654F /* Ring.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFrontBackScreen.swift; sourceTree = "<group>"; };
 		9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationCarouselScreen.swift; sourceTree = "<group>"; };
 		9AD3996E2871C3F500B672B5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		9AECC0952963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDimensionalRotationRingScreen.swift; sourceTree = "<group>"; };
 		9AF0DB46287471B600C7654F /* FitnessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessScreen.swift; sourceTree = "<group>"; };
 		9AF0DB49287478E900C7654F /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 		9A04D6B52870208100EA0A63 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9AECC0942963E51D004137B7 /* 3DRotation */,
 				9A2369BA28FBF6940036D8FF /* ChangeFrontBack */,
 				9A0D1DD8287ABA76009745E3 /* ExpandCenterScroll */,
 				9AF0DB452874719800C7654F /* Fitness */,
@@ -190,6 +193,14 @@
 				9AD3996E2871C3F500B672B5 /* View+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9AECC0942963E51D004137B7 /* 3DRotation */ = {
+			isa = PBXGroup;
+			children = (
+				9AECC0952963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift */,
+			);
+			path = 3DRotation;
 			sourceTree = "<group>";
 		};
 		9AF0DB452874719800C7654F /* Fitness */ = {
@@ -368,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AECC0962963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift in Sources */,
 				9A04D6E02870208300EA0A63 /* HomeScreen.swift in Sources */,
 				9A0D1DDA287ABAC8009745E3 /* ExpandCenterScrollScreen.swift in Sources */,
 				9A1D00F12875C29000C80D19 /* FitnessRingCardView.swift in Sources */,
