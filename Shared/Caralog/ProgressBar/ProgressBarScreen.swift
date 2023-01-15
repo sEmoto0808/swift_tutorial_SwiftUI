@@ -28,7 +28,17 @@ struct ProgressBarScreen: View {
                     }
 
 
-                    itemBackground
+                    ZStack(alignment: .center) {
+                        itemBackground
+
+                        LineProgressBar(
+                            progress: .constant(0.5)
+                        )
+                        .frame(
+                            width: (UIScreen.main.bounds.size.width - screenPadding * 2 - itemPadding) / 2 - 32,
+                            height: (UIScreen.main.bounds.size.width - screenPadding * 2 - itemPadding) / 2 - 32
+                        )
+                    }
                 }
 
             }
