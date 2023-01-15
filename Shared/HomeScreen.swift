@@ -20,13 +20,17 @@ struct HomeScreen: View {
                     createListItem(title: "Change Front Back", itemType: .animationChangeFrontBack)
                     createListItem(title: "Rotation - 3D Ring", itemType: .animation3DRotation)
                 }
+
+                Section(header: Text("UI Catalog").fontWeight(.bold)) {
+                    createCatalogItem(title: "ProgressBar", catalogType: .progressBar)
+                }
             }
             .navigationTitle("Home")
         }
 
     }
 
-    func createListItem(title: String, itemType: ItemType) -> some View {
+    private func createListItem(title: String, itemType: ItemType) -> some View {
         NavigationLink(destination: itemType.destination) {
 
             HStack {
@@ -37,7 +41,7 @@ struct HomeScreen: View {
         }
     }
 
-    enum ItemType {
+    private enum ItemType {
         case animationRotation
         case animationFitness
         case animationExpandCenterScroll
@@ -58,6 +62,28 @@ struct HomeScreen: View {
                 return AnyView(ChangeFrontBackScreen())
             case .animation3DRotation:
                 return AnyView(ThreeDimensionalRotationRingScreen())
+            }
+        }
+    }
+
+    private func createCatalogItem(title: String, catalogType: CatalogType) -> some View {
+        NavigationLink(destination: catalogType.destination) {
+
+            HStack {
+
+                Text(title)
+                    .fontWeight(.bold)
+            }
+        }
+    }
+
+    private enum CatalogType {
+        case progressBar
+
+        var destination: some View {
+            switch self {
+            case .progressBar:
+                return AnyView(ProgressBarScreen())
             }
         }
     }

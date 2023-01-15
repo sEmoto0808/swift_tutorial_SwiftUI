@@ -20,6 +20,8 @@
 		9A0D1DDA287ABAC8009745E3 /* ExpandCenterScrollScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0D1DD9287ABAC8009745E3 /* ExpandCenterScrollScreen.swift */; };
 		9A1D00F12875C29000C80D19 /* FitnessRingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D00F02875C29000C80D19 /* FitnessRingCardView.swift */; };
 		9A2369BC28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */; };
+		9AA7CFAD2973F2DD00A041E0 /* ProgressBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7CFAC2973F2DD00A041E0 /* ProgressBarScreen.swift */; };
+		9AA7CFB02973FB8200A041E0 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7CFAF2973FB8200A041E0 /* CircleProgressBar.swift */; };
 		9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */; };
 		9AD3996F2871C3F500B672B5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3996E2871C3F500B672B5 /* View+Extension.swift */; };
 		9AECC0962963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AECC0952963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift */; };
@@ -61,6 +63,8 @@
 		9A0D1DD9287ABAC8009745E3 /* ExpandCenterScrollScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCenterScrollScreen.swift; sourceTree = "<group>"; };
 		9A1D00F02875C29000C80D19 /* FitnessRingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessRingCardView.swift; sourceTree = "<group>"; };
 		9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFrontBackScreen.swift; sourceTree = "<group>"; };
+		9AA7CFAC2973F2DD00A041E0 /* ProgressBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarScreen.swift; sourceTree = "<group>"; };
+		9AA7CFAF2973FB8200A041E0 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		9AD3996B2871A28900B672B5 /* RotationCarouselScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationCarouselScreen.swift; sourceTree = "<group>"; };
 		9AD3996E2871C3F500B672B5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		9AECC0952963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDimensionalRotationRingScreen.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		9A04D6B52870208100EA0A63 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9AA7CFAA2973F26300A041E0 /* Caralog */,
 				9AECC0942963E51D004137B7 /* 3DRotation */,
 				9A2369BA28FBF6940036D8FF /* ChangeFrontBack */,
 				9A0D1DD8287ABA76009745E3 /* ExpandCenterScroll */,
@@ -179,6 +184,31 @@
 				9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */,
 			);
 			path = ChangeFrontBack;
+			sourceTree = "<group>";
+		};
+		9AA7CFAA2973F26300A041E0 /* Caralog */ = {
+			isa = PBXGroup;
+			children = (
+				9AA7CFAB2973F28B00A041E0 /* ProgressBar */,
+			);
+			path = Caralog;
+			sourceTree = "<group>";
+		};
+		9AA7CFAB2973F28B00A041E0 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				9AA7CFAE2973FB5C00A041E0 /* View */,
+				9AA7CFAC2973F2DD00A041E0 /* ProgressBarScreen.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		9AA7CFAE2973FB5C00A041E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AA7CFAF2973FB8200A041E0 /* CircleProgressBar.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9AD3996A28719E8D00B672B5 /* Rotation */ = {
@@ -390,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA7CFAD2973F2DD00A041E0 /* ProgressBarScreen.swift in Sources */,
 				9AECC0962963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift in Sources */,
 				9A04D6E02870208300EA0A63 /* HomeScreen.swift in Sources */,
 				9A0D1DDA287ABAC8009745E3 /* ExpandCenterScrollScreen.swift in Sources */,
@@ -401,6 +432,7 @@
 				9AD3996C2871A28900B672B5 /* RotationCarouselScreen.swift in Sources */,
 				9AF0DB47287471B600C7654F /* FitnessScreen.swift in Sources */,
 				9AECC0992963FA5D004137B7 /* RotationRing.swift in Sources */,
+				9AA7CFB02973FB8200A041E0 /* CircleProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
