@@ -37,9 +37,37 @@ final class MotionManager: ObservableObject {
             }
 
             if let gyroData = gyroData {
-                self.gyroRotationX = gyroData.rotationRate.x
-                self.gyroRotationY = gyroData.rotationRate.y
-                self.gyroRotationZ = gyroData.rotationRate.z
+                if gyroData.rotationRate.x < 0 {
+//                    self.gyroRotationX = (-gyroData.rotationRate.x + 180) / 360.0
+                    self.gyroRotationX = -gyroData.rotationRate.x + 0.5
+                } else {
+                    self.gyroRotationX = gyroData.rotationRate.x
+                }
+
+                if gyroData.rotationRate.y < 0 {
+//                    self.gyroRotationY = (-gyroData.rotationRate.y + 180) / 360.0
+                    self.gyroRotationY = -gyroData.rotationRate.y + 0.5
+                } else {
+                    self.gyroRotationY = gyroData.rotationRate.y
+                }
+
+                if gyroData.rotationRate.z < 0 {
+//                    self.gyroRotationZ = (-gyroData.rotationRate.z + 180) / 360.0
+                    self.gyroRotationZ = -gyroData.rotationRate.z + 0.5
+                } else {
+                    self.gyroRotationZ = gyroData.rotationRate.z
+                }
+
+                print("----------------------")
+                print(self.gyroRotationX)
+                print(self.gyroRotationY)
+                print(self.gyroRotationZ)
+                print("----------------------")
+//                print("----------------------")
+//                print(gyroData.rotationRate.x)
+//                print(gyroData.rotationRate.y)
+//                print(gyroData.rotationRate.z)
+//                print("----------------------")
             }
         }
     }

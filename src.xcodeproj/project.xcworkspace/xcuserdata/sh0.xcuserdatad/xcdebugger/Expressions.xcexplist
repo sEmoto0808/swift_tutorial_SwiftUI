@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in MotionManager.startGyroUpdates():MotionManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "gyroRotationX">
+            </PersistentString>
+            <PersistentString
+               value = "gyroData.rotationRate.z">
+            </PersistentString>
+            <PersistentString
+               value = "gyroRotationY">
+            </PersistentString>
+            <PersistentString
+               value = "gyroData.rotationRate.y">
+            </PersistentString>
+            <PersistentString
+               value = "gyroRotationZ">
+            </PersistentString>
+            <PersistentString
+               value = "gyroData.rotationRate.x">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
