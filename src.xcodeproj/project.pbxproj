@@ -20,6 +20,7 @@
 		9A0D1DDA287ABAC8009745E3 /* ExpandCenterScrollScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0D1DD9287ABAC8009745E3 /* ExpandCenterScrollScreen.swift */; };
 		9A1D00F12875C29000C80D19 /* FitnessRingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D00F02875C29000C80D19 /* FitnessRingCardView.swift */; };
 		9A2369BC28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */; };
+		9A335B3229990540008B9F6B /* HolographicEffectScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A335B3129990540008B9F6B /* HolographicEffectScreen.swift */; };
 		9AA7CFAD2973F2DD00A041E0 /* ProgressBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7CFAC2973F2DD00A041E0 /* ProgressBarScreen.swift */; };
 		9AA7CFB02973FB8200A041E0 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7CFAF2973FB8200A041E0 /* CircleProgressBar.swift */; };
 		9AA7CFB2297401B500A041E0 /* LineProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7CFB1297401B500A041E0 /* LineProgressBar.swift */; };
@@ -64,6 +65,7 @@
 		9A0D1DD9287ABAC8009745E3 /* ExpandCenterScrollScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCenterScrollScreen.swift; sourceTree = "<group>"; };
 		9A1D00F02875C29000C80D19 /* FitnessRingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessRingCardView.swift; sourceTree = "<group>"; };
 		9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFrontBackScreen.swift; sourceTree = "<group>"; };
+		9A335B3129990540008B9F6B /* HolographicEffectScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolographicEffectScreen.swift; sourceTree = "<group>"; };
 		9AA7CFAC2973F2DD00A041E0 /* ProgressBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarScreen.swift; sourceTree = "<group>"; };
 		9AA7CFAF2973FB8200A041E0 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		9AA7CFB1297401B500A041E0 /* LineProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineProgressBar.swift; sourceTree = "<group>"; };
@@ -121,12 +123,8 @@
 		9A04D6B52870208100EA0A63 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9A335B2F299904FE008B9F6B /* Animation */,
 				9AA7CFAA2973F26300A041E0 /* Caralog */,
-				9AECC0942963E51D004137B7 /* 3DRotation */,
-				9A2369BA28FBF6940036D8FF /* ChangeFrontBack */,
-				9A0D1DD8287ABA76009745E3 /* ExpandCenterScroll */,
-				9AF0DB452874719800C7654F /* Fitness */,
-				9AD3996A28719E8D00B672B5 /* Rotation */,
 				9A04D6B62870208100EA0A63 /* srcApp.swift */,
 				9A04D6B72870208100EA0A63 /* HomeScreen.swift */,
 				9AD3996D2871C3CC00B672B5 /* Extension */,
@@ -186,6 +184,27 @@
 				9A2369BB28FBF6CB0036D8FF /* ChangeFrontBackScreen.swift */,
 			);
 			path = ChangeFrontBack;
+			sourceTree = "<group>";
+		};
+		9A335B2F299904FE008B9F6B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				9A335B302999052D008B9F6B /* HolographicEffect */,
+				9AD3996A28719E8D00B672B5 /* Rotation */,
+				9AF0DB452874719800C7654F /* Fitness */,
+				9A0D1DD8287ABA76009745E3 /* ExpandCenterScroll */,
+				9A2369BA28FBF6940036D8FF /* ChangeFrontBack */,
+				9AECC0942963E51D004137B7 /* 3DRotation */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		9A335B302999052D008B9F6B /* HolographicEffect */ = {
+			isa = PBXGroup;
+			children = (
+				9A335B3129990540008B9F6B /* HolographicEffectScreen.swift */,
+			);
+			path = HolographicEffect;
 			sourceTree = "<group>";
 		};
 		9AA7CFAA2973F26300A041E0 /* Caralog */ = {
@@ -427,6 +446,7 @@
 				9AECC0962963E56C004137B7 /* ThreeDimensionalRotationRingScreen.swift in Sources */,
 				9A04D6E02870208300EA0A63 /* HomeScreen.swift in Sources */,
 				9A0D1DDA287ABAC8009745E3 /* ExpandCenterScrollScreen.swift in Sources */,
+				9A335B3229990540008B9F6B /* HolographicEffectScreen.swift in Sources */,
 				9A1D00F12875C29000C80D19 /* FitnessRingCardView.swift in Sources */,
 				9AF0DB4A287478E900C7654F /* Ring.swift in Sources */,
 				9A04D6DE2870208300EA0A63 /* srcApp.swift in Sources */,
