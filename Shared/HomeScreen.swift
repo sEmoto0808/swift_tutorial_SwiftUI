@@ -21,6 +21,7 @@ struct HomeScreen: View {
                     createListItem(title: "Rotation - 3D Ring", itemType: .animation3DRotation)
                     createListItem(title: "Holographic Effect", itemType: .animationHolographicEffect)
                     createListItem(title: "Wave", itemType: .animationWave)
+                    createListItem(title: "Roulette", itemType: .animationRoulette)
                 }
 
                 Section(header: Text("UI Catalog").fontWeight(.bold)) {
@@ -51,6 +52,7 @@ struct HomeScreen: View {
         case animation3DRotation
         case animationHolographicEffect
         case animationWave
+        case animationRoulette
 
         var destination: some View {
 
@@ -70,6 +72,8 @@ struct HomeScreen: View {
                 return AnyView(HolographicEffectScreen())
             case .animationWave:
                 return AnyView(WaveAnimationScreen())
+            case .animationRoulette:
+                return AnyView(RouletteScreen())
             }
         }
     }
